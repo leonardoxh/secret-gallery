@@ -1,0 +1,59 @@
+buildscript {
+    ext.versions = [
+            'kotlin': '1.2.41',
+            'supportLibrary': '27.1.1',
+            'junit': '4.12',
+            'arch': '1.1.1',
+            'keystore': '1.2.1',
+            'dagger': '2.15',
+            'okio': '1.14.1',
+            'picasso': '2.71828',
+            'photoView': '2.1.3'
+    ]
+    ext.deps = [
+            'kotlin': "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
+            'supportLibrary': "com.android.support:appcompat-v7:${versions.supportLibrary}",
+            'supportDesign': "com.android.support:design:${versions.supportLibrary}",
+            'arch': "android.arch.lifecycle:extensions:${versions.arch}",
+            'keystore': "com.github.leonardoxh:keystore-ultimate:${versions.keystore}",
+            'dagger': "com.google.dagger:dagger:${versions.dagger}",
+            'lifecycle': "android.arch.lifecycle:runtime:${versions.arch}",
+            'okio': "com.squareup.okio:okio:${versions.okio}",
+            'picasso': "com.squareup.picasso:picasso:${versions.picasso}",
+            'cardView': "com.android.support:cardview-v7:${versions.supportLibrary}",
+            'photoView': "com.github.chrisbanes:PhotoView:${versions.photoView}",
+            'kapt': [
+                    'dagger': "com.google.dagger:dagger-compiler:${versions.dagger}",
+                    'lifecycle': "android.arch.lifecycle:compiler:${versions.arch}"
+            ],
+            'test': [
+                    'junit': "junit:junit:${versions.junit}",
+                    'keystore': "com.github.leonardoxh:keystore-ultimate-test:${versions.keystore}"
+            ]
+    ]
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.5.1'
+}

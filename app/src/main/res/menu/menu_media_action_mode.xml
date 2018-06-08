@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/share_media"
+        android:title="@string/media_list_action_share"
+        android:icon="@android:drawable/ic_menu_share"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/delete_media"
+        android:icon="@drawable/ic_media_delete"
+        android:title="@string/media_list_action_mode_delete"
+        app:showAsAction="never"/>
+</menu>

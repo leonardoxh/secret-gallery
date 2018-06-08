@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Login -->
+    <string name="login_password_create_pin">Looks like you don\'t have a PIN and a FAKE PIN yet, you can set up a new one here</string>
+    <string name="login_password_pin">PIN</string>
+    <string name="login_password_fake_pin">Fake pin</string>
+    <string name="login_password_pin_incorrect">Incorrect password</string>
+    <string name="login_password_pin_fake_equal">PIN and FAKE PIN should be different for a reason ;)</string>
+
+    <!-- Media import -->
+    <string name="media_import_menu_title">Import media</string>
+    <string name="media_import_pick_title">Import from</string>
+
+    <!-- Main controller -->
+    <string name="menu_bottom_gallery">Gallery</string>
+    <string name="menu_bottom_links">Links</string>
+
+    <!-- Media list -->
+    <string name="media_list_action_mode_delete">Delete</string>
+    <string name="media_list_action_mode_item_selected_placeholder" formatted="false">%d selected</string>
+    <string name="media_list_action_share">Share</string>
+
+    <!-- Fake -->
+    <string name="fake_sorrow">No content yet!</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.bitbucket.leorossetto.secretgallery">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/appName"
+        android:name="org.bitbucket.leorossetto.secretgallery.AppApplication"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="org.bitbucket.leorossetto.secretgallery.MainActivity"
+            android:launchMode="singleTask"
+            android:label="@string/menu_bottom_gallery">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="org.bitbucket.leorossetto.secretgallery.login.LoginActivity" />
+        <activity android:name="org.bitbucket.leorossetto.secretgallery.media.detail.MediaDetailActivity"
+            android:parentActivityName="org.bitbucket.leorossetto.secretgallery.MainActivity"/>
+        <activity android:name="org.bitbucket.leorossetto.secretgallery.fake.FakeActivity" />
+
+        <provider
+            android:authorities="org.bitbucket.leorossetto.secretgallery.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
+        </provider>
+    </application>
+
+</manifest>
